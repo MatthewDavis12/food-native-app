@@ -16,7 +16,7 @@ export default function App() {
 
     useEffect(() => {
         const checkAuth = async () => {
-            await AsyncStorage.removeItem('auth-token');
+            // await AsyncStorage.removeItem('auth-token');
             const token = await AsyncStorage.getItem('auth-token');
 
             if (token) {

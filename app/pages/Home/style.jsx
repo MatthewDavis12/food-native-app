@@ -8,14 +8,35 @@ export default styles = StyleSheet.create({
         backgroundColor: 'rgb(245, 245, 245)'
     },
 
+    // Header Style
     header: {
         width: '100%',
         height: toVL(5),
         borderBottomWidth: toVL(0.17),
         borderBottomColor: 'rgb(235, 235, 235)',
-        backgroundColor: 'rgb(255, 255, 255)'
+        backgroundColor: 'rgb(255, 255, 255)',
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 20
     },
 
+    headerRight: {
+        flex: 1,
+        alignItems: 'flex-end'
+    },
+
+    headerLeft: {
+        flex: 1,
+        alignItems: 'flex-start'
+    },
+
+    companyTitle: {
+        fontSize: toVL(2),
+        fontWeight: 'bold',
+        color: 'rgb(50, 50, 50)'
+    },
+
+    // Body Styles
     body: {
         flex: 1,
         flexDirection: 'row'
@@ -25,6 +46,8 @@ export default styles = StyleSheet.create({
     bodyNavLeft: {
         height: '100%',
         width: toVL(8),
+        alignItems: 'center',
+        padding: 20,
         backgroundColor: 'rgb(255,255,255)',
         borderRightColor: 'rgb(235, 235, 235)',
         borderRightWidth: toVL(0.17),
