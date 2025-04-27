@@ -31,7 +31,7 @@ export default styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'rgb(0, 103, 238)',
+        backgroundColor: 'rgb(57, 134, 236)',
         borderTopStartRadius: 5,
         borderTopEndRadius: 5,
         boxShadow: '0px 3px 5px -2px rgba(0, 0, 0, 0.3)'

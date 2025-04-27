@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
-import { toVH, toVL } from "@/utils/relativeSize";
+import { toVH, toVL, toVS } from "@/utils/relativeSize";
 
 export default styles = StyleSheet.create({
     container: {
         width: '100%',
         height: '100%',
-        backgroundColor: 'rgb(245, 245, 245)'
+        backgroundColor: 'rgb(243, 247, 250)'
     },
 
     // Header Style
@@ -43,14 +43,30 @@ export default styles = StyleSheet.create({
         // backgroundColor: 'red'
     },
 
+    // Nav Left Styles
     bodyNavLeft: {
         height: '100%',
         width: toVL(8),
         alignItems: 'center',
-        padding: 20,
         backgroundColor: 'rgb(255,255,255)',
         borderRightColor: 'rgb(235, 235, 235)',
         borderRightWidth: toVL(0.17),
+        padding: 0
+    },
+
+    navLeftTop: {
+        flex: 1,
+        width: '100%',
+        rowGap: toVL(0.2),
+        padding: toVL(1.5)
+    },
+
+    navLeftBottom: {
+        flex: 1,
+        width: '100%',
+        justifyContent: "flex-end",
+        rowGap: toVL(0.2),
+        padding: toVL(1.5)
     },
 
     bodyNavRight: {
@@ -75,7 +91,12 @@ export default styles = StyleSheet.create({
     },
 
     menuNav: {
-        width: '98%',
+        flexDirection: 'row',
+        padding: '1%',
+        columnGap: 5,
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+        width: '95%',
         height: toVL(4),
         borderRadius: 5,
         backgroundColor: 'rgb(255, 255, 255)',
