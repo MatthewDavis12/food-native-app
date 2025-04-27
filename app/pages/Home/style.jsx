@@ -69,6 +69,7 @@ export default styles = StyleSheet.create({
         padding: toVL(1.5)
     },
 
+    // Right Nav Style
     bodyNavRight: {
         flex: 1,
         height: '100%',
@@ -76,6 +77,71 @@ export default styles = StyleSheet.create({
         backgroundColor: 'rgb(255,255,255)',
         borderLeftColor: 'rgb(235, 235, 235)',
         borderLeftWidth: toVL(0.17),
+    },
+
+    /// Right Nav Header Styling ///
+
+    rightNavTop: {
+        height: toVL(5),
+        flexDirection: 'row',
+        borderBottomWidth: toVL(0.17),
+        borderBottomColor: 'rgb(235, 235, 235)'
+        // backgroundColor: 'rgb(255, 0, 0)'
+    },
+
+    rightNavTopLeft: {
+        flex: 1,
+        alignItems: 'center',
+        flexDirection: 'row',
+        padding: 5
+        // backgroundColor: 'red',
+    },
+
+    rightNavTopRight: {
+        flex: 1,
+        // backgroundColor: 'blue'
+    },
+
+    //// New Ticket Button Style ////
+
+    newTicket: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        width: toVL(11),
+        height: toVL(3),
+        backgroundColor: 'rgb(245, 245, 245)',
+        borderRadius: 3,
+        columnGap: 5
+    },
+
+    newTicketIcon: {
+        tintColor: 'rgb(120, 120, 120)',
+        height: toVL(1.2),
+        width: toVL(1.2),
+    },
+
+    newTicketText: {
+        color: 'rgb(120, 120, 120)',
+        textAlign: 'center',
+        fontSize: toVL(1.5)
+    },
+
+    ticketNum: {
+        visibility: 'hidden'
+    },
+    //// New Ticket Button Style END ////
+
+    /// Right Nav Header Styling END ///
+
+    rightNavBody: {
+        flex: 8,
+        // backgroundColor: 'rgb(0, 255, 0)'
+    },
+
+    rightNavBottom: {
+        flex: 2,
+        backgroundColor: 'rgb(245, 245, 245)'
     },
 
     // Menu Container Styles

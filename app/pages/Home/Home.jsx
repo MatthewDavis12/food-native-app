@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native";
 import styles from './style';
 import MenuItem from "./components/MenuItem/MenuItem";
 import LeftNavItem from "./components/LeftNavItem/LeftNavItem";
@@ -58,7 +58,27 @@ export default function HomePage() {
                 </View>
 
                 <View style={styles.bodyNavRight}>
+                    <View style={styles.rightNavTop}>
+                        <View style={styles.rightNavTopLeft}>
+                            <TouchableOpacity style={styles.newTicket}>
+                                <Image style={styles.newTicketIcon} source={require('@/assets/images/square-plus.png')} />
+                                <Text style={styles.newTicketText}>New Ticket</Text>
+                            </TouchableOpacity>
+                            <Text style={styles.ticketNum}>Table 4 - John</Text>
+                        </View>
 
+                        <View style={styles.rightNavTopRight}>
+
+                        </View>
+                    </View>
+
+                    <View style={styles.rightNavBody}>
+
+                    </View>
+
+                    <View style={styles.rightNavBottom}>
+
+                    </View>
                 </View>
             </View>
         </View>
