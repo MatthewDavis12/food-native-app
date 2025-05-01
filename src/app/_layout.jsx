@@ -6,7 +6,8 @@ export default function RootLayout() {
         <AuthProvider>
             <Stack screenOptions={{
                 headerShown: false,
-                animation: 'fade'
+                animation: 'simple_push',
+                animationDuration: 200,
             }}>
                 <Stack.Screen name="login/index" />
                 <Stack.Screen name="home/index" />

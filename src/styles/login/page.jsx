@@ -43,10 +43,11 @@ export default styles = StyleSheet.create({
     },
 
     loginHeaderSubtitle: {
-        fontSize: toVL(1.6),
-        marginBottom: 15,
+        fontSize: toVS(3),
+        marginBottom: 20,
         fontWeight: 'bold',
-        color: 'rgb(60, 60, 60)'
+        color: 'rgb(60, 60, 60)',
+        // backgroundColor: 'rgb(255, 0, 0)'
     },
 
     // Login Body View
@@ -61,22 +62,30 @@ export default styles = StyleSheet.create({
         width: '90%',
         alignItems: 'center',
         justifyContent: 'center',
-        height: toVL(3.5),
+        height: '15%',
         borderWidth: 1,
-        borderColor: 'rgb(120, 210, 120)',
-        backgroundColor: 'rgb(120, 225, 120)',
+        borderColor: 'rgb(120, 200, 120)',
+        backgroundColor: 'rgb(120, 235, 120)',
         borderRadius: 2
     },
 
     loginSubmitTxt: {
         color: 'rgb(255, 255, 255)',
-        fontSize: toVL(1.7),
-        textAlign: 'center'
+        fontSize: toVS(3),
+        textAlign: 'center',
+    },
+
+    loginLoadingImg: {
+        height: '70%',
+        aspectRatio: 1,
+        resizeMode: 'contain',
+        opacity: 0.8,
+        tintColor: 'rgb(255, 255, 255)',
     },
 
     // Login Footer View
     loginFooterView: {
-        flex: 0.8,
+        flex: 0.6,
         alignItems: 'center',
         justifyContent: 'center',
         borderTopWidth: 2,
@@ -85,7 +94,7 @@ export default styles = StyleSheet.create({
 
     footerMsg: {
         textAlign: 'center',
-        fontSize: toVL(1.4),
+        fontSize: toVS(2),
         color: 'rgb(70, 70, 70)'
     }
 })
