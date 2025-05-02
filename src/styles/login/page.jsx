@@ -69,6 +69,10 @@ export default styles = StyleSheet.create({
         borderRadius: 2
     },
 
+    loginSubmitDisabled: {
+        backgroundColor: 'rgb(160, 235, 160)',
+    },
+
     loginSubmitTxt: {
         color: 'rgb(255, 255, 255)',
         fontSize: toVS(3),

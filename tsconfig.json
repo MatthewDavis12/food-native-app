@@ -11,9 +11,9 @@
   "include": [
     "**/*.ts",
     "**/*.jsx",
+    "**/*.js",
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
-    "src/utils/relativeSize.js"
   ]
 }

@@ -56,17 +56,19 @@ export default styles = StyleSheet.create({
 
     navLeftTop: {
         flex: 1,
+        alignItems: 'center',
         width: '100%',
         rowGap: toVL(0.2),
-        padding: toVL(1.5)
+        paddingTop: 10,
     },
 
     navLeftBottom: {
         flex: 1,
         width: '100%',
+        alignItems: 'center',
         justifyContent: "flex-end",
         rowGap: toVL(0.2),
-        padding: toVL(1.5)
+        paddingBottom: 10
     },
 
     // Right Nav Style
@@ -105,13 +107,16 @@ export default styles = StyleSheet.create({
     //// New Ticket Button Style ////
 
     newTicket: {
+        width: '80%',
+        aspectRatio: 4,
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
-        width: toVL(11),
-        height: toVL(3),
         backgroundColor: 'rgb(245, 245, 245)',
         borderRadius: 3,
+        // borderWidth: 1,
+        // borderColor: 'rgb(210, 210, 210)',
+        boxShadow: '0px 2px 1px -1px rgba(60, 60, 60, 0.1)',
         columnGap: 5
     },
 

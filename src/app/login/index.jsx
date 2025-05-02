@@ -27,25 +27,37 @@ export default function LoginPage() {
         setIsLoggedIn(true);
         canLogin.current = false;
 
-        // router.push('/home');
+        router.push('/home');
         console.log('logged in', canLogin.current);
+    }
+
+    // Render login
+    const renderLoginBtn = () => {
+        if (canLogin.current) {
+            return <Text style={styles.loginSubmitTxt}>Login</Text>
+        } else {
+            return <Animated.Image
+                style={[
+                    styles.loginLoadingImg,
+                    { transform: [{ rotate: spinVal }] }
+                ]}
+                source={require('@assets/images/loading.png')} />
+        }
     }
 
     // Run loading animation on component mount
     useEffect(() => {
-        spinAnim.setValue(0);
-
         Animated.loop(
             Animated.timing(spinAnim, {
                 toValue: 1,
                 duration: 1000,
-                useNativeDriver: true,
-                isInteraction: false,
+                useNativeDriver: false,
                 easing: Easing.linear
             }),
         ).start()
     }, [])
 
+    // Login Page Component
     return (
         <View style={styles.mainPage}>
             <View style={styles.loginView}>
@@ -61,19 +73,8 @@ export default function LoginPage() {
                     <LoginInputField labelText='Username' />
                     <LoginInputField labelText='Password' secureText={true} />
 
-                    <TouchableOpacity style={styles.loginSubmitBtn} onPress={() => onLogin()}>
-                        {canLogin.current && (
-                            <Text style={styles.loginSubmitTxt}>Login</Text>
-                        )}
-
-                        {!canLogin.current && (
-                            <Animated.Image
-                                style={[
-                                    styles.loginLoadingImg,
-                                    { transform: [{ rotate: spinVal }] }
-                                ]}
-                                source={require('@assets/images/loading.png')} />
-                        )}
+                    <TouchableOpacity style={[styles.loginSubmitBtn, !canLogin.current && styles.loginSubmitDisabled]} onPress={() => onLogin()}>
+                        {renderLoginBtn()}
                     </TouchableOpacity>
                 </View>
 

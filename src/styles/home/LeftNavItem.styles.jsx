@@ -3,6 +3,7 @@ import { toVL, toVS } from '@/src/utils/relativeSize';
 
 export default styles = StyleSheet.create({
     itemContainer: {
+        width: '70%',
         aspectRatio: 1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -30,8 +31,8 @@ export default styles = StyleSheet.create({
     },
 
     itemIcon: {
-        width: "40%",
-        height: "40%",
+        height: '40%',
+        aspectRatio: 1,
         padding: 0,
         tintColor: 'rgb(80, 80, 80)'
     }
