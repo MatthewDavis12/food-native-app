@@ -1,11 +1,14 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native";
-import styles from '@styles/home/page';
-import MenuItem from '@components/home/MenuItem';
-import LeftNavItem from '@components/home/LeftNavItem';
-import MenuNavButton from '@components/home/MenuNavButton';
 import { useAuth } from "@context/AuthContext";
 import { router, useRootNavigationState } from "expo-router";
 import { useEffect } from "react";
+
+// Components
+import styles from '@styles/home/page';
+import MenuItem from '@components/home/MenuItem';
+import TicketItem from "@components/home/TicketItem";
+import LeftNavItem from '@components/home/LeftNavItem';
+import MenuNavButton from '@components/home/MenuNavButton';
 
 export default function HomePage() {
     const [isLoggedIn] = useAuth();
@@ -76,10 +79,12 @@ export default function HomePage() {
                     <View style={styles.rightNavTop}>
                         <View style={styles.rightNavTopLeft}>
                             <TouchableOpacity style={styles.newTicket}>
-                                <Image style={styles.newTicketIcon} source={require('@assets/images/square-plus.png')} />
+                                <View style={styles.newTicketIconWrapper}>
+                                    <Image style={styles.newTicketIcon} source={require('@assets/images/square-plus.png')} />
+                                </View>
+
                                 <Text style={styles.newTicketText}>New Ticket</Text>
                             </TouchableOpacity>
-                            <Text style={styles.ticketNum}>Table 4 - John</Text>
                         </View>
 
                         <View style={styles.rightNavTopRight}>
@@ -88,7 +93,9 @@ export default function HomePage() {
                     </View>
 
                     <View style={styles.rightNavBody}>
-
+                        <ScrollView style={{ padding: 10 }} contentContainerStyle={{ width: '100%', height: '100%' }}>
+                            <TicketItem />
+                        </ScrollView>
                     </View>
 
                     <View style={styles.rightNavBottom}>

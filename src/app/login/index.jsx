@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'react';
 
 export default function LoginPage() {
     const canLogin = useRef(true);
+    const animSpeed = useRef(500).current;
     const [isLoggedIn, setIsLoggedIn] = useAuth();
 
     const spinAnim = useRef(new Animated.Value(0)).current;
@@ -27,7 +28,7 @@ export default function LoginPage() {
         setIsLoggedIn(true);
         canLogin.current = false;
 
-        router.push('/home');
+        router.replace('/home');
         console.log('logged in', canLogin.current);
     }
 
@@ -50,7 +51,7 @@ export default function LoginPage() {
         Animated.loop(
             Animated.timing(spinAnim, {
                 toValue: 1,
-                duration: 1000,
+                duration: animSpeed,
                 useNativeDriver: false,
                 easing: Easing.linear
             }),

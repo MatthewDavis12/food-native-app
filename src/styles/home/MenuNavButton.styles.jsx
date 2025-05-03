@@ -3,8 +3,8 @@ import { toVL, toVS } from "@/src/utils/relativeSize";
 
 export default styles = StyleSheet.create({
     optionButton: {
-        flex: 1,
         height: '100%',
+        aspectRatio: 3,
         alignItems: 'center',
         justifyContent: 'center',
     },

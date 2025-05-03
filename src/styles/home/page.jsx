@@ -75,7 +75,6 @@ export default styles = StyleSheet.create({
     bodyNavRight: {
         flex: 1,
         height: '100%',
-        width: toVL(2),
         backgroundColor: 'rgb(255,255,255)',
         borderLeftColor: 'rgb(235, 235, 235)',
         borderLeftWidth: toVL(0.17),
@@ -95,7 +94,7 @@ export default styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         flexDirection: 'row',
-        padding: 5
+        padding: 5,
         // backgroundColor: 'red',
     },
 
@@ -107,29 +106,36 @@ export default styles = StyleSheet.create({
     //// New Ticket Button Style ////
 
     newTicket: {
-        width: '80%',
+        height: '80%',
         aspectRatio: 4,
         alignItems: 'center',
-        justifyContent: 'center',
         flexDirection: 'row',
-        backgroundColor: 'rgb(245, 245, 245)',
+        backgroundColor: 'rgb(240, 240, 240)',
         borderRadius: 3,
-        // borderWidth: 1,
-        // borderColor: 'rgb(210, 210, 210)',
         boxShadow: '0px 2px 1px -1px rgba(60, 60, 60, 0.1)',
-        columnGap: 5
+        columnGap: 5,
+        paddingLeft: '5%'
+    },
+
+    newTicketIconWrapper: {
+        height: '50%',
+        aspectRatio: 1
     },
 
     newTicketIcon: {
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain',
         tintColor: 'rgb(120, 120, 120)',
-        height: toVL(1.2),
-        width: toVL(1.2),
     },
 
     newTicketText: {
         color: 'rgb(120, 120, 120)',
-        textAlign: 'center',
-        fontSize: toVL(1.5)
+        fontSize: toVL(1.5),
+        lineHeight: toVL(1.5),
+        padding: 0,
+        alignContent: 'center',
+        textAlignVertical: 'center'
     },
 
     ticketNum: {
@@ -141,6 +147,7 @@ export default styles = StyleSheet.create({
 
     rightNavBody: {
         flex: 8,
+        padding: 1
         // backgroundColor: 'rgb(0, 255, 0)'
     },
 
@@ -153,32 +160,29 @@ export default styles = StyleSheet.create({
     bodyContainer: {
         flex: 2,
         gap: 20,
-        width: '100%',
         height: '100%',
         alignItems: 'center',
         paddingHorizontal: 20,
-        paddingTop: 20
+        paddingTop: 20,
         // backgroundColor: 'red'
     },
 
     menuNav: {
         flexDirection: 'row',
-        padding: '1%',
         columnGap: 5,
         alignItems: 'center',
         justifyContent: 'space-evenly',
-        width: '95%',
-        height: toVL(4),
+        width: '100%',
+        height: toVL(4.5),
         borderRadius: 5,
+        padding: '1%',
         backgroundColor: 'rgb(255, 255, 255)',
         boxShadow: '0px 1px 12px -6px rgba(0, 0, 0, 0.2)'
     },
 
     menuItems: {
         flex: 1,
-        flexDirection: 'row',
         width: '100%',
-        flexWrap: 'wrap',
         rowGap: 30,
         columnGap: 19,
     },
@@ -187,8 +191,8 @@ export default styles = StyleSheet.create({
         width: '100%',
         flexWrap: 'wrap',
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
         padding: 0,
-        rowGap: 40
+        columnGap: '2.666669%', // This is dumb but has to be done for smaller screens to look the same as larger screens for the column gap.
+        rowGap: 30
     }
 })
